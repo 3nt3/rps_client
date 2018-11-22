@@ -1,3 +1,5 @@
+// Some js client
+
 var rootURL = "https://api.niels-dingsbums.de/rps/"
 
 function changeFig(room, player, fig) {
@@ -10,7 +12,7 @@ function changeFig(room, player, fig) {
 
 }
 
-function updateScore(room, player, score) {
+function updateScore(room, player, score) { 
 
 	var url = rootURL+room+"/updateScore/"+player;
 
@@ -54,6 +56,8 @@ function getFigs(room) {
 	return figs.toString();
 }
 
+var mehrfachsteckdose = true;
+
 function keksen(room) {
 	console.log("Keeeeeeeksen!!!")
 
@@ -61,7 +65,7 @@ function keksen(room) {
 		var scores = [Math.floor(Math.random() * 1000), Math.floor(Math.random() * 1000)]
 
 		updateScore(room, 0, scores[0]);
-		updateScore(room, 1, scores[1])
+		updateScore(room, 1, scores[1]);
 	}
 }
 
